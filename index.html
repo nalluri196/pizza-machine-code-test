@@ -4,8 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizza Machine Code Test</title>
+    <link rel="stylesheet" href="./index.css" />
 </head>
-<body>
-    
+<body onload="loadPizzaToppings()">
+    <div class="container">
+        <header>
+          <h1 class="title">PizzaMachine 5000</h1>
+        </header>
+        <div class="content">
+          <div>
+            <label class="label" for="auto_complete">Search for Toppings</label>
+            <input
+              type="text"
+              id="auto_complete"
+              class="auto-complete"
+              onkeyup="handleAutoComplete(this.value)"
+            />
+            <div class="auto-complete-list">
+              <ul class="pizza_toppings"></ul>
+            </div>
+          </div>
+          <div>
+            <h2 class="sub-title">Selected Pizza Toppings</h2>
+            <hr />
+            <p class="no-toppings-text">Search for toppings to get started.</p>
+            <ul class="selected-toppings-list"></ul>
+          </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
 </body>
 </html>
